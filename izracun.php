@@ -22,8 +22,42 @@
 				<p>			 </p>
 				<b>b='.$_b .'</b>
 				<p>			 </p>
-				<b>c=(3*'.$_a.'-'.$_b.')/2='.$c .'</b>
+				<b>Izračun formule c=(3*'.$_a.'-'.$_b.')/2='.$c .'</b>
+				<p>-----------------------------------------------</p>
 			</div>';
+			
+			$_e=$_POST['e'];
+			$_f=$_POST['f'];
+			$_g=($_e+$_f)/2;
+			
+			if ($_e>1 && $_f>1 && $_e<6 && $_f<6) {		
+  				$g=($_e+$_f)/2;
+			
+				print '
+			<div class="odlomak2">
+				<p>			 </p>
+				<b class="vra2">prvi kolokvij='.$_e .'</b>
+				<p>			 </p>
+				<b>drugi kolokvij='.$_f .'</b>
+				<p>			 </p>
+				<b>ukupna ocjena=('.$_e.'+'.$_f.')/2='.$g .'</b>
+			</div>';
+			}
+
+			if ($_e<2 || $_f<2) {		
+  				$g=($_e+$_f)/2;
+			
+				print '
+			<div class="odlomak3">
+				<p>			 </p>
+				<b class="vra2">prvi kolokvij='.$_e .'</b>
+				<p>			 </p>
+				<b>drugi kolokvij='.$_f .'</b>
+				<p>			 </p>
+				<b>Oba kolokvija moraju biti pozitivna</b>
+			</div>';
+			}
+			
 		?>
 	</body>
 	<footer>
